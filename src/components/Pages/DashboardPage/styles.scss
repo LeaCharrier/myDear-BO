@@ -1,0 +1,11 @@
+@import "../../../styles/index.scss";
+
+.dashboardAnalytics.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include maxWidth($breakpointTabletPortrait) {
+       margin-bottom: 20px;
+    }
+}

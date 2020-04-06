@@ -1,0 +1,38 @@
+@import "../../../styles/index.scss";
+
+.rw-multiselect {
+  margin-bottom: 30px;
+
+  &-tag {
+    background: white;
+    border-radius: 6px;
+    border: 1px solid $shadow;
+  }
+
+  .rw-widget-input {
+    background: $white;
+    border-radius: 6px;
+    box-shadow: 0px 8px 48px $shadow;
+    border: none;
+
+    div {
+      display: flex;
+      padding: 10px;
+
+      .rw-multiselect-taglist {
+        display: flex;
+        flex-wrap: wrap;
+
+        .rw-multiselect-tag {
+          background: white;
+          border-radius: 6px;
+          border: 1px solid $shadow;
+        }
+
+        div {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

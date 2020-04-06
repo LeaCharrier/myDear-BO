@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'avenir';
+    src: url('assets/fonts/avenir/Avenir-Heavy.eot');
+    src: url('assets/fonts/avenir/Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/avenir/Avenir-Heavy.woff2') format('woff2'),
+        url('assets/fonts/avenir/Avenir-Heavy.woff') format('woff'),
+        url('assets/fonts/avenir/Avenir-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url('assets/fonts/avenir/Avenir-Medium.eot');
+    src: url('assets/fonts/avenir/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/avenir/Avenir-Medium.woff2') format('woff2'),
+        url('assets/fonts/avenir/Avenir-Medium.woff') format('woff'),
+        url('assets/fonts/avenir/Avenir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

@@ -1,0 +1,90 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "../../../styles/index.scss";
+
+.sliderRoom {
+  &-content {
+    width: 100%;
+
+  }
+}
+
+.imgSlider {
+  position: relative;
+
+  &-delete {
+    position: relative;
+  }
+}
+
+.slick-track {
+  padding-bottom: 20px;
+}
+
+.slick-slider {
+  width: calc(100% + 20px);
+
+  @include maxWidth($breakpointTabletPortrait) {
+    width: 100%;
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+
+    &:before {
+      content:'';
+      display: block;
+      opacity: 1;
+      background-image: url('https://i.ibb.co/KsmFhz6/arrow.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 16px;
+      height: 30px;
+
+      @include maxWidth($breakpointTabletPortrait) {
+        content: none;
+      }
+    }
+  }
+
+  .slick-prev {
+    left: 10px;
+
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+  .slick-disabled {
+    display: none !important;
+  }
+  .slick-next {
+    right: 30px;
+
+    @include maxWidth($breakpointTabletPortrait) {
+      right: 10px;
+    }
+  }
+}
+
+.slick-slide {
+  div {
+    margin-right: 20px;
+
+    @include maxWidth($breakpointTabletPortrait) {
+      margin-right: 0;
+    }
+
+    img {
+      border-radius: 6px;
+      max-height: 370px;
+      border-radius: 6px;
+      object-fit: contain;
+    }
+  }
+}
+
+.slick-dots {
+  margin-right: 20px;
+  max-width: 760px;
+}

@@ -1,0 +1,55 @@
+@import "../../../styles/index.scss";
+
+.page-mdp {
+  display: flex;
+  position: relative;
+
+  .content-mdp {
+    width: 100%;
+
+    form {
+      max-width: 425px;
+      padding: 190px 47px 20px;
+      margin: 0 auto;
+
+      @include maxWidth($breakpointTabletPortrait) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 90px 47px 90px;
+        height: 100vh;
+      }
+
+      .title {
+        font-size: 34px;
+        font-weight: 900;
+        color: $grey;
+        margin-bottom: 139px;
+        text-align: left;
+
+        @include maxWidth($breakpointTabletPortrait) {
+          margin-bottom: 0;
+        }
+      }
+
+      .contain-button {
+        margin-top: 170px;
+
+        @include maxWidth($breakpointTabletPortrait) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .bg {
+    background-image: url("../../../assets/images/bg-connexion.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    @include maxWidth($breakpointTabletPortrait) {
+      display: none;
+    }
+  }
+}

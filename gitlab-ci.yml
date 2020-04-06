@@ -1,0 +1,66 @@
+# Reference: https://www.exclamationlabs.com/blog/continuous-deployment-to-npm-using-gitlab-ci/
+
+# GitLab uses docker in the background, so we need to specify the
+# image versions. This is useful because we're freely to use
+# multiple node versions to work with it. They come from the docker
+# repo.
+# Uses NodeJS V 9.4.0
+image: node:9.4.0
+
+# And to cache them as well.
+cache:
+  paths:
+    - node_modules/
+    - .yarn
+
+# We tell GitLab to install all the packages
+# before running anything.
+# Docker images come with yarn preinstalled
+before_script:
+  - apt-get update -qq && apt-get install
+
+# You specify the stages. Those are the steps that GitLab will go through
+# Order matters.
+stages:
+  - build
+  - lint
+  - test
+  - openMr
+
+Build:
+  stage: build
+  tags:
+    - node
+  before_script:
+    - yarn config set cache-folder .yarn
+    - yarn install
+  script:
+    - npm run build
+
+Test:
+  stage: test
+  tags:
+  - node
+  before_script:
+    - yarn config set cache-folder .yarn
+    - yarn install
+  script:
+    - yarn test
+
+Lint:
+  stage: lint
+  tags:
+    - node
+  before_script:
+  - yarn config set cache-folder .yarn
+  - yarn install
+  script:
+    - yarn test
+
+Open Merge Request:
+  image: tmaier/gitlab-auto-merge-request
+  stage: openMr
+  tags:
+    - node
+  script:
+    - bash ./gitlab-deploy/auto-merge-request.sh # The name of the script

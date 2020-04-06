@@ -1,0 +1,29 @@
+@import "../../../styles/index.scss";
+
+.donneesAnalyticsNumber {
+    width: 100%;
+
+    &-infos {
+        padding: 27px 0;
+        background: $blue2;
+        text-align: center;
+        width: 100%;
+
+        @include maxWidth($breakpointTabletPortrait) {
+            padding: 20px 0;
+        }
+
+        &-bigText {
+            font-size: 34px;
+            font-weight: 900;
+            color: $white;
+            margin-bottom: 6px;
+        }
+
+        &-smallText {
+            font-size: 21px;
+            font-weight: 900;
+            color: $white;
+        }
+    }
+}

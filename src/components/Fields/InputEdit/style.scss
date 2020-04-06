@@ -1,0 +1,41 @@
+@import "../../../styles/index.scss";
+
+.inputEdit {
+    background: $white;
+    border-radius: 6px;
+    box-shadow: 0px 8px 48px $shadow;
+    padding: 20px;
+
+    &-map {
+        position: relative;
+        padding-left: 75px;
+
+        &:before {
+            content:'';
+            position: absolute;
+            left: 20px;
+            width: 28px;
+            height: 35px;
+            background-image: url('https://i.ibb.co/rk2cn2D/map.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: $grey;
+        font-weight: 500;
+
+        &::placeholder {
+            font-size: 16px;
+            color: $grey05;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@import "../../../../styles/index.scss";
+
+.contain-form {
+  margin: 60px auto 20px;
+  max-width: 760px;
+  overflow: hidden;
+
+  @include maxWidth($breakpointTabletPortrait) {
+    margin: 0 auto 20px;
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: $grey;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-top: 20px;
+
+
+    @include maxWidth($breakpointTabletPortrait) {
+      padding-top: 0;
+    }
+  }
+
+  .inputEdit {
+    margin-bottom: 30px;
+  }
+
+  .slick-slider {
+    margin-bottom: 40px;
+  }
+
+  .imgRoom {
+    height: 400px;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .uploadFile {
+    p {
+      display: none;
+    }
+
+    .fileContainer {
+      padding: 0;
+      margin: 0;
+      box-shadow: none;
+
+      button {
+        background: $pink;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .uploadPicturesWrapper {
+    .deleteImage {
+      background: $pink;
+      font-size: 9px;
+      line-height: 22px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .contain {
+    &-button {
+      display: flex;
+      align-items: center;
+
+      .btn {
+        width: auto;
+        margin: 20px auto 0;
+        padding: 12px 75px;
+      }
+    }
+
+    &-inputs {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-input {
+      color: $grey;
+      width: calc(50% - 20px);
+
+      p {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

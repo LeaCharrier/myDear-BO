@@ -1,0 +1,24 @@
+/* eslint-disable import/prefer-default-export */
+export const MDP_TITLE = 'Mot de passe oublié';
+export const EMAIL_PLACEHOLDER = 'Email';
+export const TEXT_TYPE = 'text';
+export const MDP_BUTTON = 'Envoyer un mail';
+export const TITLE_SIGNIN = 'Bienvenue';
+export const MDP_PLACEHOLDER = 'Mot de passe';
+export const CONNEXION_BUTTON = 'Connexion';
+export const MDPFORGET_LINK = 'Mot de passe oublié ?';
+export const SUBMIT_TYPE = 'submit';
+export const INPUT_COMPONENT = 'input';
+export const MAIL_STRING = 'email';
+export const MDP_STRING = 'password';
+export const COOKIES_AUTHORIZATION_TOKEN = 'COOKIES_AUTHORIZATION_TOKEN';
+export const VALIDATION_BUTTON = 'Valider';
+export const TRUE_TEXT = 'true';
+export const FALSE_TEXT = 'false';
+export const OUI_TEXT = 'Oui';
+export const NON_TEXT = 'Non';
+export const EMAIL_TYPE = 'email';
+export const NUMBER_TYPE = 'number';
+export const TYPE_ADMIN = 'administrator';
+export const TYPE_SERVICEPRODIDER = 'serviceProvider';
+export const ALL = 'all';

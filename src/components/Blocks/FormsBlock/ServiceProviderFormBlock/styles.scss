@@ -1,0 +1,194 @@
+@import "../../../../styles/index.scss";
+
+.form {
+  display: flex;
+
+  @include maxWidth($breakpointMobile) {
+    flex-direction: column;
+  }
+
+  .contain-button {
+    margin-top: 20px;
+  }
+
+
+  &-linkDelete {
+    display: block;
+    padding: 0;
+    margin-bottom: 20px;
+    border: none;
+    background-color: $white;
+    color: $pink;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  &-img {
+    width: 30%;
+
+    @include maxWidth($breakpointMobile) {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    &-content {
+      background: $white;
+      box-shadow: 0px 8px 48px $shadow;
+      padding-top: 20px;
+
+      .imgServiceProvider {
+        width: 130px;
+        height: 130px;
+        border-radius: 100%;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+
+        @include maxWidth($breakpointTabletPortrait) {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      .uploadFile {
+        p {
+          display: none;
+        }
+
+        .fileContainer {
+          padding: 0;
+          margin: 0;
+
+          button {
+            background: $pink;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .uploadPicturesWrapper {
+        .deleteImage {
+          background: $pink;
+          font-size: 9px;
+          line-height: 22px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  &-inputs {
+    width: 70%;
+    margin-left: 40px;
+
+    @include maxWidth($breakpointMobile) {
+      width: 90%;
+      margin: 20px auto;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+
+      @include maxWidth($breakpointMobile) {
+        flex-wrap: wrap;
+
+        div {
+          width: 100%;
+        }
+      }
+
+      .inputEdit, .radio {
+        min-width: 340px;
+
+        @include maxWidth($breakpointMobile) {
+          min-width: 100%;
+        }
+      }
+
+      .radio {
+        display: flex;
+
+        label {
+          margin-right: 40px;
+          color: $grey05;
+        }
+
+        input {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+
+          border-radius: 50%;
+          width: 16px;
+          height: 16px;
+
+          border: 2px solid #999;
+          transition: 0.2s all linear;
+          outline: none;
+          margin-right: 5px;
+
+          position: relative;
+          top: 4px;
+        }
+
+        input:checked {
+          border: 6px solid $pink;
+        }
+      }
+
+      .title {
+        color: $grey;
+
+        @include maxWidth($breakpointMobile) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .btn {
+    max-width: 200px;
+
+    @include maxWidth($breakpointMobile) {
+      max-width: 100%;
+    }
+  }
+}
+
+.serviceProviderInit {
+  &-text {
+    font-weight: 600;
+    color: $grey;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &-link {
+    display: block;
+    font-size: 17px;
+    text-decoration: underline;
+    margin-bottom: 40px;
+  }
+
+  &-img {
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto 20px;
+
+    @include maxWidth($breakpointTabletPortrait) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

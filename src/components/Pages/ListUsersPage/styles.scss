@@ -1,0 +1,20 @@
+@import "../../../styles/index.scss";
+
+.containUsers {
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.notFoundContent {
+    .notFound {
+        padding-top: 20px;
+
+        p {
+            font-size: 24px;
+            color: $grey;
+            font-weight: 600;
+        }
+    }
+}

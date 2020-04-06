@@ -1,0 +1,161 @@
+@import "../../../styles/index.scss";
+
+.devisItem {
+  width: 100%;
+  background-color: $grey2;
+  border-radius: 6px;
+  padding: 40px 46px;
+  margin-bottom: 40px;
+
+  &.Accepté {
+    background-color: $green;
+  }
+
+  @include maxWidth($breakpointTabletPortrait) {
+    padding: 30px 20px;
+  }
+
+  &-user {
+    display: flex;
+    text-align: left;
+
+    @include maxWidth($breakpointTabletPortrait) {
+      flex-direction: column;
+    }
+
+    &-infos {
+      margin-right: 40px;
+    }
+
+    &-description {
+      position: relative;
+      line-height: 25px;
+      padding-top: 41px;
+
+      @include maxWidth($breakpointTabletPortrait) {
+        margin-top: 20px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 21px;
+        background-image: url('https://i.ibb.co/MpM7j6s/quote.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    &-img {
+      width: 78px;
+      height: 78px;
+      border-radius: 100%;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto 20px;
+
+      @include maxWidth($breakpointTabletPortrait) {
+        margin: 0 0 20px;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: 900;
+    color: $grey;
+    text-align: left;
+    margin-top: 44px;
+    margin-bottom: 20px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 54px;
+
+    @include maxWidth($breakpointTabletPortrait) {
+      flex-direction: column;
+    }
+
+    &-infos {
+      width: calc(100% - 370px);
+
+      @include maxWidth($breakpointTabletPortrait) {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+
+      &:first-of-type{
+        color: $pink;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid $grey3;
+      }
+
+      &:last-of-type {
+        font-weight: bold;
+        padding-top: 15px;
+        margin-top: 15px;
+        border-top: 1px solid $grey3;
+      }
+    }
+
+    img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin-left: 70px;
+      border-radius: 6px;
+
+      @include maxWidth($breakpointTabletPortrait) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+
+    @include maxWidth($breakpointTabletPortrait) {
+      flex-direction: column;
+    }
+
+    .btn {
+      width: 200px;
+      margin-right: 20px;
+    }
+  }
+
+  &-statut {
+    color: $green2;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  &.Refusé {
+    .devisItem {
+      &-statut {
+        color: $pink;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}

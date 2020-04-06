@@ -1,0 +1,53 @@
+@import "../../../styles/index.scss";
+
+.tabOrder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 100%;
+
+    @include maxWidth($breakpointTabletPortrait) {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        font-size: 16px;
+        color: $grey;
+        padding: 6px 25px;
+        border-radius: 15px;
+        border: none;
+        background: $white;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        @include maxWidth($breakpointTabletPortrait) {
+            margin-top: 10px;
+        }
+
+        &.isActive {
+            color: $white;
+            background-color: $pink;
+        }
+    }
+
+    .add {
+        position: relative;
+        width: 52px;
+        height: 52px;
+        background: $blue2;
+        border-radius: 100%;
+        margin-left: 20px;
+        background-image: url('https://i.ibb.co/LzKnYJR/add.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include maxWidth($breakpointTabletPortrait) {
+            width: 42px;
+            height: 42px;
+            margin-top: 10px;
+        }
+    }
+}

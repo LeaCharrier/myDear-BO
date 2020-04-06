@@ -1,0 +1,66 @@
+@import "../../../styles/index.scss";
+
+
+.admin {
+    border-radius: 6px;
+    box-shadow: 0px 8px 48px $shadow;
+
+    &-content {
+        display: flex;
+        padding: 22px 29px;
+
+        @include maxWidth($breakpointTabletPortrait) {
+            padding: 25px 15px;
+        }
+    }
+
+    &-picture {
+        width: 47px;
+        height: 47px;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include maxWidth($breakpointTabletPortrait) {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    &-infos {
+        margin-left: 10px;
+
+        &-name {
+            font-weight: 900;
+            color: $grey;
+            margin-bottom: 4px;
+            text-align: left;
+        }
+        &-role {
+            color: $grey;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+    }
+
+    .contain-button {
+        display: flex;
+        align-items: center;
+    }
+
+    &-deco {
+        display: block;
+        position: relative;
+        width: 23px;
+        height: 23px;
+        border-radius: 100%;
+        background: $white;
+        box-shadow: 0px 8px 48px $shadow;
+        border: none;
+        background-image: url('https://i.ibb.co/Zm0QRLr/off.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+}

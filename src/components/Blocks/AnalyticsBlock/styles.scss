@@ -1,0 +1,32 @@
+@import "../../../styles/index.scss";
+
+.analyticsBlock {
+    width: calc(50% - 10px);
+    max-width: 450px;
+    margin-top: 40px;
+
+    @include maxWidth($breakpointTabletPortrait) {
+        width: 100%;
+        max-width: inherit;
+    }
+
+    &-title {
+        font-size: 24px;
+        font-weight: 900;
+        color: $grey;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    &-contain {
+        display: flex;
+        justify-content: space-between;
+        padding: 10%;
+        box-shadow: 0px 8px 48px $shadow;
+        border-radius: 6px;
+
+        @include maxWidth($breakpointTabletPortrait) {
+            justify-content: space-around;
+        }
+    }
+}

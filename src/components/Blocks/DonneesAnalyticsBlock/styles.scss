@@ -1,0 +1,37 @@
+@import "../../../styles/index.scss";
+
+.donneesAnalytics {
+    &-infos {
+       padding: 16px 36px;
+       background: $yellow;
+       text-align: center;
+
+       @include maxWidth($breakpointMobile) {
+            padding: 16px 20px;
+        }
+
+       &.isLess {
+            background: $pink;
+       }
+
+       &-bigText {
+           font-size: 26px;
+           font-weight: 900;
+           color: $white;
+           margin-bottom: 6px;
+       }
+
+       &-smallText {
+            font-size: 16px;
+            font-weight: 900;
+            color: $white;
+       }
+    }
+
+    &-title {
+        color: $grey;
+        font-size: 18px;
+        margin-top: 18px;
+        text-align: left;
+    }
+}

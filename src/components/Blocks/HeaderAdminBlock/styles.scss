@@ -1,0 +1,23 @@
+@import "../../../styles/index.scss";
+
+
+.headerAdmin {
+    padding: 34px 0 0;
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding-top: 20px;
+
+        @include maxWidth($breakpointTabletPortrait) {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+
+    .contain-button {
+        display: flex;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,14 @@
+@import "../../../styles/index.scss";
+
+.listBookings {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-link {
+        display: block;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+

@@ -1,0 +1,52 @@
+@import "../../../styles/index.scss";
+
+.search {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 8px 48px $shadow;
+
+    &-button {
+        position: relative;
+        background-color: $white;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        border-radius: 6px 0;
+        border: none;
+
+        @include maxWidth($breakpointTabletPortrait) {
+            width: 50px;
+            height: 50px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url('https://i.ibb.co/xXjX3M4/search.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &-input {
+        width: 100%;
+        border: none;
+        padding: 13px;
+        border-radius: 0 6px;
+        font-size: 16px;
+        color:$grey;
+
+        &::placeholder {
+            color: $white2;
+        }
+    }
+}
+
+.searchBlock {
+    width: 100%;
+}
